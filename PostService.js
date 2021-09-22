@@ -8,6 +8,11 @@ class PostService {
         return createdPost;
     }
 
+    async createWithoutPicture(post) {
+        const createdPost = await Post.create(post);
+        return createdPost
+    }
+
     async getAll() {
         const posts = await Post.find();
         return posts;
